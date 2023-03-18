@@ -5,7 +5,7 @@ USER root
 RUN  mkdir -p /app/build
 WORKDIR /app/build
 COPY daemon_proccess.sh .
-RUN apk add -y curl
+RUN apk add curl
 RUN curl -o docker-latest.tgz https://download.docker.com/linux/static/stable/x86_64/docker-23.0.1.tgz
 RUN  tar zxvf docker-latest.tgz \
     && cp docker/docker /usr/local/bin/ \
